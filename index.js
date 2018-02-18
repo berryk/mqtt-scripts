@@ -8,6 +8,7 @@ const config = require('./config.js');
 const pkg = require('./package.json');
 
 /* istanbul ignore next */
+log.setColor(false);
 log.setLevel(['debug', 'info', 'warn', 'error'].indexOf(config.verbosity) === -1 ? 'info' : config.verbosity);
 log.info(pkg.name + ' ' + pkg.version + ' starting');
 
